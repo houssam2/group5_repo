@@ -2,48 +2,57 @@
 <html lang="en-us">
    <head>
       <meta charset="UTF-8">
-      <title>Movie Recommendation Service</title>
+      <title>Goodmovies - Find a good movie</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
    </head>
    <body>
       <nav class="navbar sticky-top navbar-expand-lg navbar-light">
          <div id="navbar-container" class="container">
-            <span class="navbar-brand m0 h1 text-white">Movie Recommendation Service</span>
+            <span class="navbar-brand m0 h1 text-white font-weight-light">good<b>movies</b></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                <ul class="navbar-nav ml-auto">
                   <li class="nav-item active font-weight-light">
-                     <a class="nav-link text-white mx-2" href="index.html">Saved</a>
-                  </li>
-                                    <li class="nav-item">
-                     <a class="nav-link text-white mx-2" href="contact.html">Recommendations</a>
+                     <a class="nav-link text-white mx-2" href="favorites.html"><i class="fas fa-heart"></i>	Favorites</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link mx-2" href="#">Sign In<span class="sr-only">(current)</span></a>
+                     <a class="nav-link text-white mx-2" href="recommendations.html"><i class="fas fa-award"></i> Recommendations</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link mx-2" href="#"><i class="fas fa-book"></i> Sign In<span class="sr-only">(current)</span></a>
                   </li>
                </ul>
                <form class="form-inline my-2 my-lg-0">
                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                </form>
+               </form>
             </div>
          </div>
       </nav>
       <div class="body-container">
-      <div class="footer-fix">
-         <div id="main-container" class="container bg-light border mt-5 pb-3">
-            <div class="row">
-               <div class="col-sm-12">
-                  <h4 class="border-bottom py-4 display-4">Sign In / Sign Up</h4>
-               </div>
+         <div class="footer-fix">
+            <div class="jumbotron">
+               <h1 class="display-4">Meet your next favorite movie.</h1>
+               <hr class="my-4">
+               <p>You’re in the right place. Search for your next movie using our extensive filtering system integrated with the most popular review websites.</p>
             </div>
-            <div class="col-md-12">
-                  <p>Please Log in or Sign Up with an email address below.</p>
+            <div id="main-container" class="container bg-light border mt-5 pb-3">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <h4 class="border-bottom py-4 display-4">Sign Up</h4>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <p class="font-italic">Please Sign Up with an email address below.</p>
                </div>
                <form>
+                  <div class="alert alert-success" role="alert">
+                     Successfully signed up!                                  
+                  </div>
                   <div class="form-group">
                      <label for="InputName">Name</label>
                      <input type="text" class="form-control" id="InputName">
@@ -54,16 +63,36 @@
                   </div>
                   <button type="submit" class="btn submit-button">Submit</button>
                </form>
+            </div>
+            <div id="main-container" class="container bg-light border mt-5 pb-3">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <h4 class="border-bottom py-4 display-4">Sign In</h4>
+                  </div>
+               </div>
+               <div class="col-md-12">
+                  <p class="font-italic">Please Log in with your email address below.</p>
+               </div>
+               <div class="alert alert-danger" role="alert">
+                  Email address not found! Please sign up or make sure you spelled correctly.
+               </div>
+               <form>
+                  <div class="form-group">
+                     <label for="InputEmail1">Email address</label>
+                     <input type="email" class="form-control" id="InputEmail1">
+                  </div>
+                  <button type="submit" class="btn submit-button">Submit</button>
+               </form>
+            </div>
          </div>
-      </div>
-      <footer class="footer py-5 mt-5">
+         <footer class="footer py-5 mt-5">
             <div class="container text-center">
-            <span class="text-white small text-center text-uppercase">Copyright &copy; Group 5</span>
-         </div>
-      </footer>
+               <span class="text-white small text-center text-uppercase">Copyright &copy; goodmovies Inc</span>
+            </div>
+         </footer>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="assets/js/script.js"></script>
-</body>
+   </body>
 </html>

@@ -7,7 +7,6 @@ body {
     background-color: #01579B;
     webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
-    text-shadow: 1px 1px #000;
 }
 .navbar-collapse.collapse.in {
     display: block!important;
