@@ -47,3 +47,10 @@ p {
     width: 100%;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
 }
+.jumbotron {
+    background-image: url("../images/wallpaper.jpg");
+    background-position: 5%;
+}
+.text-shadow {
+    text-shadow: 1px 1px #000;
+}
