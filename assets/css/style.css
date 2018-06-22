@@ -30,19 +30,26 @@ p {
 .footer {
     background-color: #263238;
 }
-.img-banner {
-    top: 80%;
+.favorites {
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 19px;
+    font-size: 15px;
+}
+.movie-hide {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
 }
 .portfolio:hover {
     opacity:0.5;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
-#img-me:hover {
+#poster:hover {
     opacity:0.5;
+    background-color: #000;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
