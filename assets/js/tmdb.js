@@ -4,11 +4,11 @@
 
 // Add our api_keys here
 var houssam_api_key = "31feed93f2b687e47fba2094f54554be";
-var tom_api_key = "";
-var jeff_api_key = "";
+var tom_api_key = "42bb145d23b872a3c9938b1df04840de";
+var jeff_api_key = "0fe08d0dba2431d286b82056b3de8c1a";
 
 // Create an array of our 3 keys. We can cycle through them so we don't quickly run out of requests.
-var tmdb_api_keys = [houssam_api_key];
+var tmdb_api_keys = [houssam_api_key, tom_api_key, jeff_api_key];
 var current_tmdb_api_key = 0;
 
 // Get the list of genre codes and put in an object. 
@@ -19,9 +19,6 @@ genres = get_genre_codes();
 console.log(genres);
 
 var recommended_movies = {};
-// Following code is for test purposes only. get_movie_list() should be called from front_end
-//get_movie_list("14,35", 2018);
-//console.log(recommended_movies);
 
 /*****************************************************************************/
 /***                              Functions                                ***/
