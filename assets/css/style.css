@@ -1,13 +1,7 @@
-body {
-    /* background-image: url(../images/bg.jpg); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 .navbar {
     background-color: #01579B;
     webkit-box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
     box-shadow: 0 5px 5px 0 rgba(0,0,0,0.15);
-    text-shadow: 1px 1px #000;
 }
 .navbar-collapse.collapse.in {
     display: block!important;
@@ -16,7 +10,7 @@ body {
     background-color: #2196F3;
 }
 .submit-button {
-    background-color: #2196F3;
+    background-color: #81C784;
     color: #FFF;
 }
 .navbar-brand {
@@ -31,18 +25,19 @@ p {
 .footer {
     background-color: #263238;
 }
-.img-banner {
-    top: 80%;
+.favorites {
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 19px;
+    font-size: 15px;
+}
+.movie-hide {
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
 }
 .portfolio:hover {
-    opacity:0.5;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-}
-#img-me:hover {
     opacity:0.5;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
@@ -52,9 +47,10 @@ p {
     width: 100%;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) );
 }
-.email-nav {
-    text-decoration: none !important;
+.jumbotron {
+    background-image: url("../images/wallpaper.jpg");
+    background-position: 5%;
 }
-.navbar-brand {
-    position: relative;
+.text-shadow {
+    text-shadow: 1px 1px #000;
 }
