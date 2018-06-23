@@ -26,10 +26,6 @@
                      <a class="nav-link text-white mx-2" href="index.html"><i class="fas fa-book"></i> Sign In</a>
                   </li>
                </ul>
-               <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-               </form>
             </div>
          </div>
       </nav>
@@ -61,46 +57,6 @@
                         </label>
                      </div>
                      <br>
-                     <span class="py-4 nav-item">Metacritic Score</span>
-                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rating" id="rt1" value="rt1" checked>
-                        <label class="form-check-label" for="rt1">
-                        >90%
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rating" id="rt2" value="rt2">
-                        <label class="form-check-label" for="rt2">
-                        >80%
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rating" id="rt3" value="rt3">
-                        <label class="form-check-label" for="rt3">
-                        >70%
-                        </label>
-                     </div>
-                     <br>
-                     <span class="py-4 nav-item">IMDB Rating</span>
-                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rating" id="imdb1" value="imdb1">
-                        <label class="form-check-label" for="imdb1">
-                        >9
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rating" id="imdb2" value="imdb2">
-                        <label class="form-check-label" for="imdb2">
-                        >8
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="rating" id="imdb3" value="imdb3">
-                        <label class="form-check-label" for="imdb3">
-                        >7
-                        </label>
-                     </div>
-                     <br>
                      <div class="form-group">
                         <label for="exampleFormControlSelect1">Release Year</label>
                         <select class="form-control" id="releaseyear">
@@ -111,15 +67,49 @@
                            <option>2014</option>
                         </select>
                      </div>
-                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Genre</label>
-                        <select class="form-control" id="genre">
-                           <option>Action</option>
-                           <option>Comedy</option>
-                           <option>Romance</option>
-                           <option>Animation</option>
-                        </select>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="action">
+                        Action
+                        </label>
                      </div>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="adventure">
+                        Adventure
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Comedy
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Horror
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Romance
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Science Fiction
+                        </label>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" value="">
+                        Thriller
+                        </label>
+                     </div>
+                     <br>
                      <div class="form-group">
                         <label for="exampleFormControlSelect1">Limit Search Result</label>
                         <select class="form-control" id="limitsearch">
@@ -129,6 +119,7 @@
                            <option>4</option>
                         </select>
                      </div>
+                     <button type="submit" class="btn submit-button"><i class="fas fa-search"></i> Filter</button>
                   </div>
                   <div class="col-sm-9">
                      <h4 class="border-bottom py-4 display-4">Recommendations</h4>
@@ -261,47 +252,47 @@
                               </td>
                            </tr>
                            <tr>
-                                <td>
-                                   <div class="text-center position-relative portfolio">
-                                      <a href="#">
-                                      <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
-                                      <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
-                                      <img src="assets/images/movie1.jpg" class="img-fluid w-75 my-2" alt="port1">
-                                      <div class="text-center py-2">The Matrix</div>
-                                      </a>
-                                   </div>
-                                </td>
-                                <td>
-                                   <div class="text-center position-relative portfolio">
-                                      <a href="#">
-                                      <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
-                                      <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
-                                      <img src="assets/images/movie2.jpg" class="img-fluid w-75 my-2" alt="port1">
-                                      <div class="text-center py-2">The Notebook</div>
-                                      </a>
-                                   </div>
-                                </td>
-                                <td>
-                                   <div class="text-center position-relative portfolio">
-                                      <a href="#">
-                                      <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
-                                      <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
-                                      <img src="assets/images/movie3.jpg" class="img-fluid w-75 my-2" alt="port1">
-                                      <div class="text-center py-2">Mr. Nobody</div>
-                                      </a>
-                                   </div>
-                                </td>
-                                <td>
-                                   <div class="text-center position-relative portfolio">
-                                      <a href="#">
-                                      <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
-                                      <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
-                                      <img src="assets/images/movie4.jpg" class="img-fluid w-75 my-2" alt="port1">
-                                      <div class="text-center py-2">The Lion King</div>
-                                      </a>
-                                   </div>
-                                </td>
-                             </tr>
+                              <td>
+                                 <div class="text-center position-relative portfolio">
+                                    <a href="#">
+                                    <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
+                                    <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
+                                    <img src="assets/images/movie1.jpg" class="img-fluid w-75 my-2" alt="port1">
+                                    <div class="text-center py-2">The Matrix</div>
+                                    </a>
+                                 </div>
+                              </td>
+                              <td>
+                                 <div class="text-center position-relative portfolio">
+                                    <a href="#">
+                                    <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
+                                    <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
+                                    <img src="assets/images/movie2.jpg" class="img-fluid w-75 my-2" alt="port1">
+                                    <div class="text-center py-2">The Notebook</div>
+                                    </a>
+                                 </div>
+                              </td>
+                              <td>
+                                 <div class="text-center position-relative portfolio">
+                                    <a href="#">
+                                    <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
+                                    <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
+                                    <img src="assets/images/movie3.jpg" class="img-fluid w-75 my-2" alt="port1">
+                                    <div class="text-center py-2">Mr. Nobody</div>
+                                    </a>
+                                 </div>
+                              </td>
+                              <td>
+                                 <div class="text-center position-relative portfolio">
+                                    <a href="#">
+                                    <a class="text-center position-absolute text-white w-75 py-2 favorites" href="#"><i class="fas fa-star"></i> Add to Favorites</a>
+                                    <a class="text-center position-absolute text-white w-75 py-2 movie-hide" href="#"><i class="fas fa-times-circle"></i> Hide Movie</a>
+                                    <img src="assets/images/movie4.jpg" class="img-fluid w-75 my-2" alt="port1">
+                                    <div class="text-center py-2">The Lion King</div>
+                                    </a>
+                                 </div>
+                              </td>
+                           </tr>
                         </tbody>
                      </table>
                   </div>
