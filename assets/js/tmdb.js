@@ -2,13 +2,15 @@
     The Movie Database (tmdb) module
 */
 
-// Add our api_keys here
-var houssam_api_key = "31feed93f2b687e47fba2094f54554be";
-var tom_api_key = "42bb145d23b872a3c9938b1df04840de";
-var jeff_api_key = "0fe08d0dba2431d286b82056b3de8c1a";
+var MAX_PAGES = 5;
 
-// Create an array of our 3 keys. We can cycle through them so we don't quickly run out of requests.
-var tmdb_api_keys = [houssam_api_key, tom_api_key, jeff_api_key];
+// Add our api_keys here
+var houssam_tmdb_api_key = "31feed93f2b687e47fba2094f54554be";
+var tom_tmdb_api_key = "42bb145d23b872a3c9938b1df04840de";
+var jeff_tmdb_api_key = "0fe08d0dba2431d286b82056b3de8c1a";
+
+// Create an array of our 3 keys. Cycle through them so we don't run out of requests.
+var tmdb_api_keys = [houssam_tmdb_api_key, tom_tmdb_api_key, jeff_tmdb_api_key];
 var current_tmdb_api_key = 0;
 
 // Get the list of genre codes and put in an object. 
@@ -17,8 +19,6 @@ var current_tmdb_api_key = 0;
 var genres = {};
 genres = get_genre_codes();
 console.log(genres);
-
-var recommended_movies = {};
 
 /*****************************************************************************/
 /***                              Functions                                ***/
@@ -29,7 +29,7 @@ var recommended_movies = {};
 function get_genre_codes() {
     var genres_local = {};
 
-    // Cycle through api_keys. DOESN'T WORK YET! Currently just uses one key.
+    // Cycle round-robin through api keys
     current_tmdb_api_key = (current_tmdb_api_key + 1) % tmdb_api_keys.length;
 
     // Query to get list of genres and their IDs
@@ -64,25 +64,29 @@ function get_genre_codes() {
 //                          14,35 = Fantasy AND Comedy, 
 //                          14|35 = Fantasy OR Comedy
 //      primary_release_year: When the movie was released; Ex. 2017
-function get_movie_list(genre_list, primary_release_year) {
+function get_all_movies_list(genre_list, primary_release_year) {
     // Clear movie_list
-    recommended_movies = [];
+    var all_movies = [];
     // get 1st page, figure out how many more pages to get
-    var page = get_movie_list_page(1, genre_list, primary_release_year);
-    append_page_to_list(recommended_movies, page.results);
+    var page = get_all_movies_list_page(1, genre_list, primary_release_year);
+    append_page_to_list(all_movies, page.results);
 
     // for loop to get rest of pages
-    for (var p = 2; p <= page.total_pages; ++p) {
-        page = get_movie_list_page(p, genre_list, primary_release_year);
-        append_page_to_list(recommended_movies, page.results);
+    for (var p = 2; p <= page.total_pages && p <= MAX_PAGES; ++p) {
+        page = get_all_movies_list_page(p, genre_list, primary_release_year);
+        append_page_to_list(all_movies, page.results);
     }
-    console.log(recommended_movies);
+    return all_movies;
 }
 
 ///////////////////////////////////////////////////////////////////////
 // Utility function used by get_movie_list(). 
 //   Gets one page at a time and appends to movie list
-function get_movie_list_page(page_no, genre_list, primary_release_year) {
+function get_all_movies_list_page(page_no, genre_list, primary_release_year) {
+
+    // Cycle round-robin through api keys
+    current_tmdb_api_key = (current_tmdb_api_key + 1) % tmdb_api_keys.length;
+
     // Query to get list of movies for a specific set of genres and year.
     //  Currently only gets english language movies
     var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key="
