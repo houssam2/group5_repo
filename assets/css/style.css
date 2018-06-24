@@ -10,7 +10,7 @@
     background-color: #2196F3;
 }
 .submit-button {
-    background-color: #81C784;
+    background-color: #00C853;
     color: #FFF;
 }
 .navbar-brand {
@@ -30,7 +30,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 15px;
-    color: #FFFF00;
+    color: #FFEA00;
     font-weight: 700;
 }
 .movie-hide {
