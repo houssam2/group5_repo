@@ -67,8 +67,27 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
             } else {
                 console.log("*** Reached max limit of recommended movies");
             }
-        });
-    }
+      
     console.log("**** Recommended Movies: ");
     console.log(recommended_movies);
+
+
+        // Creating a div to hold the movie
+        var movieDiv = $("<div class='movie'>");
+
+        // Retreiving thr URL for the image
+        var imgURL = response.Poster;
+
+        // Creating an element to hold the image
+        var image = $("<img>").attr("src", imgURL);
+
+        // Appending the image
+        movieDiv.append(image);
+
+        // Displaying the movie
+        $("#movies-view").prepend(movieDiv);
+
+    });
+}
+
 }
