@@ -14,14 +14,14 @@ var omdb_api_keys = [houssam_omdb_api_key, tom_omdb_api_key, jeff_omdb_api_key];
 var current_omdb_api_key = 0;
 
 // This call for test purposes only. get_movie_list() should be called from front_end
-get_rec_movies(90,          // Minimum rotten tomatoes rating
-               "Comedy",    // Genre
-               2018,        // Year
-               10);         // Limit recommended movies size
+// get_rec_movies(90,          // Minimum rotten tomatoes rating
+//                "Comedy",    // Genre
+//                2018,        // Year
+//                10);         // Limit recommended movies size
 
 function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
-    var genre_code = genres[genre];
-    var all_movies = get_all_movies_list(genre_code, year);
+    // var genre_code = genres[genre];
+    var all_movies = get_all_movies_list(genre, year);
     console.log(all_movies);
 
     for (var m=0; m<all_movies.length; ++m) {       
