@@ -3,6 +3,7 @@
 */
 
 var recommended_movies = [];
+hide_all_posters();
 
 // Add our api_keys here
 var houssam_omdb_api_key = "e4169616";
@@ -21,9 +22,15 @@ var current_omdb_api_key = 0;
 
 function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
     // var genre_code = genres[genre];
+    recommended_movies = [];
+    hide_all_posters();
+
     var all_movies = get_all_movies_list(genre, year);
     console.log(all_movies);
 
+    // for each movie from tmdb, make ajax call to omdb to get Rotten Tomatoes rating.
+    //      If rating does not exist, skip movie.
+    //      Otherwise, add it to recommended movies list if rating is greater than minimum.
     for (var m=0; m<all_movies.length; ++m) {       
         // Cycle round-robin through api_keys
         current_omdb_api_key = (current_omdb_api_key + 1) % omdb_api_keys.length;
@@ -35,30 +42,29 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
 
         $.ajax({
             url: queryURL,
-            method: "GET",
-            async: false
+            method: "GET"
         }).then(function(response) {
+            // Each response is one movie from omdb
             console.log(response);
+            // Limit is provided by user
             if (recommended_movies.length < limit) {
+                // If movie does not exist in omdb, error response will be sent.
+                // The error response does not have a Ratings property.
                 if (response.hasOwnProperty('Ratings')) {
-                    var ratings = response.Ratings;
-                    console.log(ratings);
-                    var rating_found = false;
-                    for (var r=0; r<ratings.length; ++r) {
-                        if (ratings[r].Source === "Rotten Tomatoes") {
-                            rating_found = true;
-                            var rating_val_str = ratings[r].Value;
-                            var rating_val = parseInt(rating_val_str.slice(0,-1));
-                            console.log("Rotten_Tomatoes = " + rating_val);
-                            if (rating_val >= rotten_tomato_min_value) {
-                                recommended_movies.push(response);
-                                console.log("PUSHED");
-                            } else {
-                                console.log("Rating " + rating_val_str + " less than " + rotten_tomato_min_value + ": NO PUSH");
-                            }
+                    // Not error response
+
+                    // if no rotten tomatoes rating, returns -1
+                    var rating = get_rotten_tomatoes(response.Ratings);
+                    if (rating != -1) {
+                        console.log("Rotten_Tomatoes = " + rating);
+                        if (rating >= rotten_tomato_min_value) {    // Min value provided by user
+                            recommended_movies.push(response);
+                            console.log("PUSHED");
+                            render_movie_poster(response, recommended_movies.length);  // Add movie to recommended movies view
+                        } else {
+                            console.log("Rating " + rating + "% less than " + rotten_tomato_min_value + "%: NO PUSH");
                         }
-                    }
-                    if (!rating_found) {
+                    } else {
                         console.log("Rotten Tomatoes rating not found for this movie");
                     }
                 } else {
@@ -67,27 +73,58 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
             } else {
                 console.log("*** Reached max limit of recommended movies");
             }
-      
-    console.log("**** Recommended Movies: ");
-    console.log(recommended_movies);
-
-
-        // Creating a div to hold the movie
-        var movieDiv = $("<div class='movie'>");
-
-        // Retreiving thr URL for the image
-        var imgURL = response.Poster;
-
-        // Creating an element to hold the image
-        var image = $("<img>").attr("src", imgURL);
-
-        // Appending the image
-        movieDiv.append(image);
-
-        // Displaying the movie
-        $("#movies-view").prepend(movieDiv);
-
-    });
+            console.log("**** Recommended Movies: ");
+            console.log(recommended_movies);
+        });
+    } // for each movie received
+    $("#movie3").hide();
 }
 
+function render_movie_poster(response, movie_num) {
+    console.log("##################################################");
+    console.log(response);
+    console.log(movie_num);
+
+    $("#img" + movie_num).attr("src", response.Poster);
+    $("#title" + movie_num).text(response.Title);
+
+    show_poster(movie_num);
+    console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+}
+
+function hide_all_posters() {
+    var num_posters = 16;
+    for (var i=1; i<=16; ++i) {
+        hide_poster(i);
+        // $(".poster").children().hide();
+    }
+}
+function hide_poster(num) {
+    $("#movie"       + num).hide();
+    $("#add-to-favs" + num).hide();
+    $("#go-to-modal" + num).hide();
+    $("#hide"        + num).hide();
+    $("#img"         + num).hide();
+    $("#title"       + num).hide();
+}
+function show_poster(num) {
+    $("#movie"       + num).show();
+    // $("#add-to-favs" + num).show();
+    // $("#go-to-modal" + num).show();
+    // $("#hide"        + num).show();
+    $("#img"         + num).show();
+    $("#title"       + num).show();
+
+}
+
+function get_rotten_tomatoes(ratings) {
+    var rating = -1;
+    for (var r=0; r<ratings.length; ++r) {
+        if (ratings[r].Source === "Rotten Tomatoes") {
+            var rating_val = ratings[r].Value;
+            // Delete percent sign (e.g. "95%" -> "95")
+            rating = parseInt(rating_val.slice(0,-1));
+        }
+    }
+    return rating;
 }
