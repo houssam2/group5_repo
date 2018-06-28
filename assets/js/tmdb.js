@@ -2,7 +2,7 @@
     The Movie Database (tmdb) module
 */
 
-var MAX_PAGES = 1;
+var MAX_PAGES = 10;
 
 // Add our api_keys here
 var houssam_tmdb_api_key = "31feed93f2b687e47fba2094f54554be";
