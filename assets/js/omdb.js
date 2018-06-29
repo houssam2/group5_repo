@@ -76,16 +76,17 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
         var movieDiv = $("<div class='movie'>");
 
         // Retreiving thr URL for the image
-        var imgURL = response.Poster;
+        var imgURL = recommended_movies.Poster;
 
         // Creating an element to hold the image
         var image = $("<img>").attr("src", imgURL);
-
+       
         // Appending the image
         movieDiv.append(image);
 
         // Displaying the movie
-        $("#movies-view").prepend(movieDiv);
+        $("#my-2").html(image);
+
 
     });
 }
