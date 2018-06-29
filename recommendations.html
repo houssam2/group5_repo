@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
     crossorigin="anonymous">
   <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 
 <body>
@@ -90,6 +91,20 @@
                 <option>2016</option>
                 <option>2015</option>
                 <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+                <option>2005</option>
+                <option>2004</option>
+                <option>2003</option>
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
               </select>
             </div>
             <div class="form-check">
@@ -104,12 +119,57 @@
             </div>
             <div class="form-check">
               <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="animation" id="animation"> Animation
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" value="comedy" id="comedy"> Comedy
               </label>
             </div>
             <div class="form-check">
               <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="crime" id="crime"> Crime
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="documentary" id="documentary"> Documentary
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="drama" id="drama"> Drama
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="family" id="family"> Family
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="fantasy" id="fantasy"> Fantasy
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="history" id="history"> History
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" value="horror" id="horror"> Horror
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="music" id="music"> Music
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="mystery" id="mystery"> Mystery
               </label>
             </div>
             <div class="form-check">
@@ -125,6 +185,16 @@
             <div class="form-check">
               <label class="form-check-label">
                 <input class="form-check-input" type="checkbox" value="thriller" id="thriller"> Thriller
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="war" id="war"> War
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" value="western" id="western"> Western
               </label>
             </div>
             <br>
@@ -151,7 +221,7 @@
                         <a id="add-to-favs1" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal1" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal1" href="#movieModal1" rel="#movieModal1" data-toggle="modal" data-ref="1" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide1" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -161,7 +231,7 @@
                         <div id="title1" class="text-center py-2">The Matrix</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal1" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -170,25 +240,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                            </div>
-                          </div>
+                          <div id="modal-body1" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -201,7 +253,7 @@
                       <a id="movie2" class="poster" href="#">
                         <a id="add-to-favs2" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites</a>
-                        <a id="go-to-modal2" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal2" href="#movieModal2" rel="#movieModal2" data-toggle="modal" data-ref="2" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More</a>
                         <a id="hide2" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
                           <i class="fas fa-times-circle"></i> Hide</a>
@@ -209,7 +261,7 @@
                         <div id="title2" class="text-center py-2">The Notebook</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal2" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -218,27 +270,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body2" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -252,7 +284,7 @@
                         <a id="add-to-favs3" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal3" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal3" href="#movieModal3" rel="#movieModal3" data-toggle="modal" data-ref="3" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide3" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -262,7 +294,7 @@
                         <div id="title3" class="text-center py-2">Mr. Nobody</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal3" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -271,27 +303,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body3" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -305,7 +317,7 @@
                         <a id="add-to-favs4" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal4" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal4" href="#movieModal4" rel="#movieModal4" data-toggle="modal" data-ref="4" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide4" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -315,7 +327,7 @@
                         <div id="title4" class="text-center py-2">The Lion King</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal4" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -324,27 +336,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body4" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -360,7 +352,7 @@
                         <a id="add-to-favs5" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal5" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal5" href="#movieModal5" rel="#movieModal5" data-toggle="modal" data-ref="5" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide5" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -370,7 +362,7 @@
                         <div id="title5" class="text-center py-2">The Matrix</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal5" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -379,27 +371,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body5" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -413,7 +385,7 @@
                         <a id="add-to-favs6" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal6" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal6" href="#movieModal6" rel="#movieModal6" data-toggle="modal" data-ref="6" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                           </a>
                         <a id="hide6" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -423,7 +395,7 @@
                         <div id="title6" class="text-center py-2">The Notebook</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal6" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -432,27 +404,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body6" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -466,7 +418,7 @@
                         <a id="add-to-favs7" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal7" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal7" href="#movieModal7" rel="#movieModal7" data-toggle="modal" data-ref="7" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide7" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -476,7 +428,7 @@
                         <div id="title7" class="text-center py-2">Mr. Nobody</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal7" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -485,27 +437,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body7" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -519,7 +451,7 @@
                         <a id="add-to-favs8" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal8" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal8" href="#movieModal8" rel="#movieModal8" data-toggle="modal" data-ref="8" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide8" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -529,7 +461,7 @@
                         <div id="title8" class="text-center py-2">The Lion King</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal8" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -538,27 +470,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body8" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -574,7 +486,7 @@
                         <a id="add-to-favs9" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal9" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal9" href="#movieModal9" rel="#movieModal9" data-toggle="modal" data-ref="9" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide9" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -584,7 +496,7 @@
                         <div id="title9" class="text-center py-2">The Matrix</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal9" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -593,27 +505,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body9" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -627,7 +519,7 @@
                         <a id="add-to-favs10" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal10" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal10" href="#movieModal10" rel="#movieModal10" data-toggle="modal" data-ref="10" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide10" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -637,7 +529,7 @@
                         <div id="title10" class="text-center py-2">The Notebook</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal10" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -646,27 +538,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body10" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -680,7 +552,7 @@
                         <a id="add-to-favs11" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal11" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal11" href="#movieModal11" rel="#movieModal11" data-toggle="modal" data-ref="11" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide11" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -690,7 +562,7 @@
                         <div id="title11" class="text-center py-2">Mr. Nobody</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal11" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -699,27 +571,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body11" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -733,7 +585,7 @@
                         <a id="add-to-favs12" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal12" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal12" href="#movieModal12" rel="#movieModal12" data-toggle="modal" data-ref="12" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide12" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -743,7 +595,7 @@
                         <div id="title12" class="text-center py-2">The Lion King</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal12" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -752,27 +604,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body12" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -788,7 +620,7 @@
                         <a id="add-to-favs13" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal13" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal13" href="#movieModal13" rel="#movieModal13" data-toggle="modal" data-ref="13" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide13" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -798,7 +630,7 @@
                         <div id="title13" class="text-center py-2">The Matrix</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal13" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -807,27 +639,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body13" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -841,7 +653,7 @@
                         <a id="add-to-favs14" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal14" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal14" href="#movieModal14" rel="#movieModal14" data-toggle="modal" data-ref="14" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide14" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -851,7 +663,7 @@
                         <div id="title14" class="text-center py-2">The Notebook</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal14" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -860,27 +672,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body14" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -894,7 +686,7 @@
                         <a id="add-to-favs15" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites<
                             /a>
-                        <a id="go-to-modal15" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal15" href="#movieModal15" rel="#movieModal15" data-toggle="modal" data-ref="15" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide15" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -904,7 +696,7 @@
                         <div id="title15" class="text-center py-2">Mr. Nobody</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal15" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -913,27 +705,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body15" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -947,7 +719,7 @@
                         <a id="add-to-favs16" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
-                        <a id="go-to-modal16" href="#movieModal" rel="#movieModal" data-toggle="modal" class="text-center position-absolute w-50 view-movie text-shadow">
+                        <a id="go-to-modal16" href="#movieModal16" rel="#movieModal16" data-toggle="modal" data-ref="16" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
                           <i class="fas fa-expand"></i> More
                         </a>
                         <a id="hide16" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
@@ -957,7 +729,7 @@
                         <div id="title16" class="text-center py-2">The Lion King</div>
                       </a>
                     </div>
-                    <div class="modal" id="movieModal" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
+                    <div class="modal" id="movieModal16" tabindex="-1" role="dialog" aria-labelledby="movieModalLabel" aria-hidden="true">
                       <div class="modal-dialog" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
@@ -966,27 +738,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <div class="modal-body">
-                            <b>Plot:</b>
-                            <br> Neo (Keanu Reeves) believes that Morpheus (Laurence Fishburne), an elusive figure considered
-                            to be the most dangerous man alive, can answer his question -- What is the Matrix? Neo is contacted
-                            by Trinity (Carrie-Anne Moss), a beautiful stranger who leads him into an underworld where he
-                            meets Morpheus. They fight a brutal battle for their lives against a cadre of viciously intelligent
-                            secret agents. It is a truth that could cost Neo something more precious than his life.
-                            <br>
-                            <br>
-                            <b>Runtime:</b>
-                            <br> 136 minutes
-                            <br>
-                            <br>
-                            <b>Time to Finish:</b> If you watched this right now, you will finish at 10:00 PM.
-                            <br>
-                            <br>
-                            <div id="youtube-trailer">
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" frameborder="0" allow="autoplay; encrypted-media"
-                                allowfullscreen></iframe>
-                            </div>
-                          </div>
+                          <div id="modal-body16" class="modal-body"></div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
@@ -1008,8 +760,7 @@
     </footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib27qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   <script src="assets/js/tmdb.js"></script>
   <script src="assets/js/omdb.js"></script>
   <!-- Must be after tmdb.js -->

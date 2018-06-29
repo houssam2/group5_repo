@@ -63,17 +63,17 @@ function get_genre_codes() {
 //                      Ex. 14    = Fantasy, 
 //                          14,35 = Fantasy AND Comedy, 
 //                          14|35 = Fantasy OR Comedy
-//      primary_release_year: When the movie was released; Ex. 2017
-function get_all_movies_list(genre_list, primary_release_year) {
+//      release_year: When the movie was released; Ex. 2017
+function get_all_movies_list(genre_list, release_year) {
     // Clear movie_list
     var all_movies = [];
     // get 1st page, figure out how many more pages to get
-    var page = get_all_movies_list_page(1, genre_list, primary_release_year);
+    var page = get_all_movies_list_page(1, genre_list, release_year);
     append_page_to_list(all_movies, page.results);
 
     // for loop to get rest of pages
     for (var p = 2; p <= page.total_pages && p <= MAX_PAGES; ++p) {
-        page = get_all_movies_list_page(p, genre_list, primary_release_year);
+        page = get_all_movies_list_page(p, genre_list, release_year);
         append_page_to_list(all_movies, page.results);
     }
     return all_movies;
@@ -82,7 +82,7 @@ function get_all_movies_list(genre_list, primary_release_year) {
 ///////////////////////////////////////////////////////////////////////
 // Utility function used by get_movie_list(). 
 //   Gets one page at a time and appends to movie list
-function get_all_movies_list_page(page_no, genre_list, primary_release_year) {
+function get_all_movies_list_page(page_no, genre_list, release_year) {
 
     // Cycle round-robin through api keys
     current_tmdb_api_key = (current_tmdb_api_key + 1) % tmdb_api_keys.length;
@@ -93,7 +93,8 @@ function get_all_movies_list_page(page_no, genre_list, primary_release_year) {
                     + tmdb_api_keys[current_tmdb_api_key]
                     + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false"
                     + "&page=" + page_no
-                    + "&primary_release_year=" + primary_release_year
+                    // + "&primary_release_year=" + primary_release_year
+                    + "&year=" + release_year
                     + "&with_genres=" + genre_list
                     + "&with_original_language=en";
     console.log(queryURL);
@@ -105,7 +106,7 @@ function get_all_movies_list_page(page_no, genre_list, primary_release_year) {
         method: "GET",
         async: false
     }).then(function(response) {
-        console.log(response);
+        // console.log(response);
         result = {page:        response.page,
                   total_pages: response.total_pages, 
                   results:     response.results};
@@ -120,4 +121,3 @@ function append_page_to_list(movie_list, page_results) {
         movie_list.push(page_results[i]);
     }
 }
-
