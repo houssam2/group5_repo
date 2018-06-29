@@ -44,21 +44,18 @@
                   </div>
                </div>
                <div class="col-md-12">
-                  <p class="font-italic">Please Sign Up with an email address below.</p>
+                  <p class="font-italic">Please Sign Up with an email address and password.</p>
                </div>
                <form>
-                  <div class="alert alert-success" role="alert">
-                     Successfully signed up!                                  
-                  </div>
                   <div class="form-group">
-                     <label for="InputName">Name</label>
-                     <input type="text" class="form-control" id="InputName">
-                  </div>
-                  <div class="form-group">
-                     <label for="InputEmail">Email address</label>
+                     <label for="InputEmail">Email Address</label>
                      <input type="email" class="form-control" id="InputEmail">
                   </div>
-                  <button type="submit" class="btn submit-button"><i class="fas fa-check"></i> Sign Up</button>
+                  <div class="form-group">
+                     <label for="InputPass">Password</label>
+                     <input type="text" class="form-control" id="InputPass">
+                  </div>
+                  <button onclick="signUp()" id="signUp" class="btn submit-button"><i class="fas fa-check"></i> Sign Up</button>
                </form>
             </div>
             <div id="main-container" class="container bg-light border mt-5 pb-3">
@@ -68,17 +65,18 @@
                   </div>
                </div>
                <div class="col-md-12">
-                  <p class="font-italic">Please Log in with your email address below.</p>
-               </div>
-               <div class="alert alert-danger" role="alert">
-                  Email address not found! Please sign up or make sure you spelled correctly.
+                  <p class="font-italic">Please Log in with your email address and password.</p>
                </div>
                <form>
                   <div class="form-group">
                      <label for="InputEmail1">Email address</label>
                      <input type="email" class="form-control" id="InputEmail1">
                   </div>
-                  <button type="submit" class="btn submit-button"><i class="fas fa-check"></i> Sign In</button>
+                  <div class="form-group">
+                      <label for="InputPass1">Password</label>
+                      <input type="text" class="form-control" id="InputPass1">
+                   </div>
+                   <button onclick="login()" id="signIn" class="btn submit-button"><i class="fas fa-check"></i> Sign In</button>
                </form>
             </div>
          </div>
@@ -90,9 +88,21 @@
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-      <script src="assets/js/tmdb.js"></script>
-      <script src="assets/js/omdb.js"></script> <!-- Must be after tmdb.js -->
+      <script src="assets/js/tmdb.js"></script> -->
+      <script src="assets/js/omdb.js"></script> Must be after tmdb.js -->
+      <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCnBB7K1x-2rGzwngazfbBY4K7vCfjQuzE",
+        authDomain: "group-5-project-1.firebaseapp.com",
+        databaseURL: "https://group-5-project-1.firebaseio.com",
+        projectId: "group-5-project-1",
+        storageBucket: "group-5-project-1.appspot.com",
+        messagingSenderId: "522365895035"
+      };
+        firebase.initializeApp(config);
+      </script>
       <script src="assets/js/script.js"></script>
-      <script src="assets/js/signin.js"></script>
+      <script src="assets/js/emailsignin.js"></script>
 </body>
 </html>

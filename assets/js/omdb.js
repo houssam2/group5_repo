@@ -83,6 +83,7 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
     } // for each movie received
 }
 
+<<<<<<< HEAD
 function render_movie_poster(response, movie_num) {
     $("#img" + movie_num).attr("src", response.Poster);
     $("#title" + movie_num).text(response.Title);
@@ -112,6 +113,9 @@ function show_poster(num) {
     // $("#hide"        + num).show();
     $("#img"         + num).show();
     $("#title"       + num).show();
+=======
+
+>>>>>>> master
 
 }
 
