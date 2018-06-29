@@ -16,8 +16,7 @@
 <body>
   <nav class="navbar sticky-top navbar-expand-lg navbar-light">
     <div id="navbar-container" class="container">
-      <span class="navbar-brand m0 h1 text-white font-weight-light">good
-        <b>movies</b>
+      <span class="navbar-brand m0 h1 text-white font-weight-light">good<b>movies</b>
       </span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -212,6 +211,7 @@
           </div>
           <div class="col-sm-9">
             <h4 class="border-bottom py-4 display-4">Recommendations</h4>
+            <div id="instructions">Use the filter on the left to search for movies.</div>
             <table class="my-3">
               <tbody>
                 <tr>
@@ -222,10 +222,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal1" href="#movieModal1" rel="#movieModal1" data-toggle="modal" data-ref="1" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide1" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img1" src="assets/images/movie1.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title1" class="text-center py-2">The Matrix</div>
@@ -254,9 +251,7 @@
                         <a id="add-to-favs2" class="text-center position-absolute w-75 py-2 favorites text-shadow" href="#">
                           <i class="fas fa-star"></i> Add to Favorites</a>
                         <a id="go-to-modal2" href="#movieModal2" rel="#movieModal2" data-toggle="modal" data-ref="2" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More</a>
-                        <a id="hide2" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide</a>
+                          <i class="fas fa-expand"></i> Read More</a>
                         <img id="img2" src="assets/images/movie2.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title2" class="text-center py-2">The Notebook</div>
                       </a>
@@ -285,10 +280,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal3" href="#movieModal3" rel="#movieModal3" data-toggle="modal" data-ref="3" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide3" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img3" src="assets/images/movie3.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title3" class="text-center py-2">Mr. Nobody</div>
@@ -318,10 +310,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal4" href="#movieModal4" rel="#movieModal4" data-toggle="modal" data-ref="4" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide4" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img4" src="assets/images/movie4.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title4" class="text-center py-2">The Lion King</div>
@@ -353,10 +342,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal5" href="#movieModal5" rel="#movieModal5" data-toggle="modal" data-ref="5" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide5" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img5" src="assets/images/movie1.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title5" class="text-center py-2">The Matrix</div>
@@ -386,11 +372,8 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal6" href="#movieModal6" rel="#movieModal6" data-toggle="modal" data-ref="6" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
+                          <i class="fas fa-expand"></i> Read More
                           </a>
-                        <a id="hide6" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
-                        </a>
                         <img id="img6" src="assets/images/movie2.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title6" class="text-center py-2">The Notebook</div>
                       </a>
@@ -419,10 +402,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal7" href="#movieModal7" rel="#movieModal7" data-toggle="modal" data-ref="7" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide7" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img7" src="assets/images/movie3.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title7" class="text-center py-2">Mr. Nobody</div>
@@ -452,10 +432,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal8" href="#movieModal8" rel="#movieModal8" data-toggle="modal" data-ref="8" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide8" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img8" src="assets/images/movie4.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title8" class="text-center py-2">The Lion King</div>
@@ -487,10 +464,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal9" href="#movieModal9" rel="#movieModal9" data-toggle="modal" data-ref="9" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide9" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img9" src="assets/images/movie1.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title9" class="text-center py-2">The Matrix</div>
@@ -520,10 +494,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal10" href="#movieModal10" rel="#movieModal10" data-toggle="modal" data-ref="10" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide10" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img10" src="assets/images/movie2.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title10" class="text-center py-2">The Notebook</div>
@@ -553,10 +524,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal11" href="#movieModal11" rel="#movieModal11" data-toggle="modal" data-ref="11" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide11" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img11" src="assets/images/movie3.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title11" class="text-center py-2">Mr. Nobody</div>
@@ -586,10 +554,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal12" href="#movieModal12" rel="#movieModal12" data-toggle="modal" data-ref="12" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide12" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img12" src="assets/images/movie4.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title12" class="text-center py-2">The Lion King</div>
@@ -621,10 +586,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal13" href="#movieModal13" rel="#movieModal13" data-toggle="modal" data-ref="13" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide13" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img13" src="assets/images/movie1.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title13" class="text-center py-2">The Matrix</div>
@@ -654,10 +616,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal14" href="#movieModal14" rel="#movieModal14" data-toggle="modal" data-ref="14" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide14" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img14" src="assets/images/movie2.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title14" class="text-center py-2">The Notebook</div>
@@ -687,10 +646,7 @@
                           <i class="fas fa-star"></i> Add to Favorites<
                             /a>
                         <a id="go-to-modal15" href="#movieModal15" rel="#movieModal15" data-toggle="modal" data-ref="15" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide15" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img15" src="assets/images/movie3.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title15" class="text-center py-2">Mr. Nobody</div>
@@ -720,10 +676,7 @@
                           <i class="fas fa-star"></i> Add to Favorites
                         </a>
                         <a id="go-to-modal16" href="#movieModal16" rel="#movieModal16" data-toggle="modal" data-ref="16" class="go-to-modal text-center position-absolute w-50 view-movie text-shadow">
-                          <i class="fas fa-expand"></i> More
-                        </a>
-                        <a id="hide16" class="text-center position-absolute w-25 py-2 movie-hide text-shadow" href="#">
-                          <i class="fas fa-times-circle"></i> Hide
+                          <i class="fas fa-expand"></i> Read More
                         </a>
                         <img id="img16" src="assets/images/movie4.jpg" class="img-fluid w-75 my-2" alt="port1">
                         <div id="title16" class="text-center py-2">The Lion King</div>
@@ -766,6 +719,7 @@
   <!-- Must be after tmdb.js -->
   <script src="assets/js/script.js"></script>
   <!-- <script src="assets/js/signin.js"></script> -->
+  <script src="assets/js/fav.js"></script>
 </body>
 
 </html>

@@ -107,7 +107,7 @@ function hide_poster(num) {
 }
 function show_poster(num) {
     $("#movie"       + num).show();
-    // $("#add-to-favs" + num).show();
+    $("#add-to-favs" + num).show();
     $("#go-to-modal" + num).show();
     // $("#hide"        + num).show();
     $("#img"         + num).show();
