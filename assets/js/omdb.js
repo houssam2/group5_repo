@@ -26,7 +26,7 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
     hide_all_posters();
 
     var all_movies = get_all_movies_list(genre, year);
-    console.log(all_movies);
+    // console.log(all_movies);
 
     // for each movie from tmdb, make ajax call to omdb to get Rotten Tomatoes rating.
     //      If rating does not exist, skip movie.
@@ -37,15 +37,18 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
 
         var queryURL = "http://www.omdbapi.com/"
                         + "?apikey=" + omdb_api_keys[current_omdb_api_key]
-                        + "&t=" + all_movies[m].title;
-        console.log(queryURL);
+                        + "&t=" + all_movies[m].title
+                        + "&y=" + year;
+        //console.log(queryURL);
+
+        // console.log(all_movies[m]);
 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function(response) {
             // Each response is one movie from omdb
-            console.log(response);
+            //console.log(response);
             // Limit is provided by user
             if (recommended_movies.length < limit) {
                 // If movie does not exist in omdb, error response will be sent.
@@ -56,31 +59,63 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
                     // if no rotten tomatoes rating, returns -1
                     var rating = get_rotten_tomatoes(response.Ratings);
                     if (rating != -1) {
-                        console.log("Rotten_Tomatoes = " + rating);
+                        // console.log("Rotten_Tomatoes = " + rating);
                         if (rating >= rotten_tomato_min_value) {    // Min value provided by user
                             recommended_movies.push(response);
-                            console.log("PUSHED");
+                            console.log(response);
+                            console.log(recommended_movies);
                             render_movie_poster(response, recommended_movies.length);  // Add movie to recommended movies view
                         } else {
-                            console.log("Rating " + rating + "% less than " + rotten_tomato_min_value + "%: NO PUSH");
+                            // console.log("Rating " + rating + "% less than " + rotten_tomato_min_value + "%: NO PUSH");
                         }
                     } else {
-                        console.log("Rotten Tomatoes rating not found for this movie");
+                        // console.log("Rotten Tomatoes rating not found for this movie");
                     }
                 } else {
-                    console.log("Movie not found in OMDB");
+                    // console.log("Movie not found in OMDB");
                 }
             } else {
-                console.log("*** Reached max limit of recommended movies");
+                // console.log("*** Reached max limit of recommended movies");
             }
-            console.log("**** Recommended Movies: ");
-            console.log(recommended_movies);
+            // console.log("**** Recommended Movies: ");
+            // console.log(recommended_movies);
         });
     } // for each movie received
-    $("#movie3").hide();
 }
 
+<<<<<<< HEAD
+function render_movie_poster(response, movie_num) {
+    $("#img" + movie_num).attr("src", response.Poster);
+    $("#title" + movie_num).text(response.Title);
 
+    show_poster(movie_num);
+}
+
+function hide_all_posters() {
+    var num_posters = 16;
+    for (var i=1; i<=16; ++i) {
+        hide_poster(i);
+        // $(".poster").children().hide();
+    }
+}
+function hide_poster(num) {
+    $("#movie"       + num).hide();
+    $("#add-to-favs" + num).hide();
+    $("#go-to-modal" + num).hide();
+    $("#hide"        + num).hide();
+    $("#img"         + num).hide();
+    $("#title"       + num).hide();
+}
+function show_poster(num) {
+    $("#movie"       + num).show();
+    // $("#add-to-favs" + num).show();
+    $("#go-to-modal" + num).show();
+    // $("#hide"        + num).show();
+    $("#img"         + num).show();
+    $("#title"       + num).show();
+=======
+
+>>>>>>> master
 
 }
 
