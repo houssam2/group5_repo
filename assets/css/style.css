@@ -87,3 +87,7 @@ iframe {
   .btn-secondary {
     background-color: #E53935;
   }
+  #instructions {
+    font-size: 20px;
+    margin: 15px 0;
+}
