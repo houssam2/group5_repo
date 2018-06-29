@@ -80,40 +80,7 @@ function get_rec_movies(rotten_tomato_min_value, genre, year, limit) {
     $("#movie3").hide();
 }
 
-function render_movie_poster(response, movie_num) {
-    console.log("##################################################");
-    console.log(response);
-    console.log(movie_num);
 
-    $("#img" + movie_num).attr("src", response.Poster);
-    $("#title" + movie_num).text(response.Title);
-
-    show_poster(movie_num);
-    console.log("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-}
-
-function hide_all_posters() {
-    var num_posters = 16;
-    for (var i=1; i<=16; ++i) {
-        hide_poster(i);
-        // $(".poster").children().hide();
-    }
-}
-function hide_poster(num) {
-    $("#movie"       + num).hide();
-    $("#add-to-favs" + num).hide();
-    $("#go-to-modal" + num).hide();
-    $("#hide"        + num).hide();
-    $("#img"         + num).hide();
-    $("#title"       + num).hide();
-}
-function show_poster(num) {
-    $("#movie"       + num).show();
-    // $("#add-to-favs" + num).show();
-    // $("#go-to-modal" + num).show();
-    // $("#hide"        + num).show();
-    $("#img"         + num).show();
-    $("#title"       + num).show();
 
 }
 
