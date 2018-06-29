@@ -2,7 +2,7 @@
     The Movie Database (tmdb) module
 */
 
-var MAX_PAGES = 5;
+var MAX_PAGES = 10;
 
 // Add our api_keys here
 var houssam_tmdb_api_key = "31feed93f2b687e47fba2094f54554be";
@@ -47,7 +47,7 @@ function get_genre_codes() {
         console.log(response);
         // Put each genre {name, id} in a local object
         for (var i=0; i<response.genres.length; ++i) {
-            var name = response.genres[i].name;
+            var name = response.genres[i].name.toLowerCase();
             var id = response.genres[i].id;
             genres_local[name] = id;
         }
