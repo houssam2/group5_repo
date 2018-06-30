@@ -34,10 +34,12 @@ var limit;
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
-    console.log(userEmail);
-    console.log(userPass);
+   
     
   });
+  
+  $("#InputEmail").val("");
+  $("#InputPass").val("");
 
   });  
   
